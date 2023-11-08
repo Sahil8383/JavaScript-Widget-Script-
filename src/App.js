@@ -1,24 +1,55 @@
-import logo from './logo.svg';
 import './App.css';
+import TokenInfo from './components/TokenInfo';
+import TokenDropdown from './components/TokenDropDown';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+
+  const [selectedToken, setSelectedToken] = useState('bitcoin');
+
+  const handleTokenSelect = (token) => {
+    setSelectedToken(token);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div
+        className='
+          w-screen
+          h-screen
+          flex
+          flex-row
+          justify-center
+          items-center
+          bg-[#2d3133]
+        '
+      >
+        <div
+          className='
+            w-1/2
+            h-full
+            flex
+            flex-col
+            justify-center
+            items-center
+          '
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <TokenDropdown onTokenSelect={handleTokenSelect} />
+        </div>
+        <div
+          className='
+            w-1/2
+            h-full
+            flex
+            flex-col
+            justify-center
+            items-center
+          '
+        >
+          <TokenInfo selectedToken={selectedToken} />
+        </div>
+      </div>
+    </>
   );
 }
 
