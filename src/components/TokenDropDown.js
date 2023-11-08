@@ -38,7 +38,6 @@ function TokenDropdown({ onTokenSelect }) {
         style={{ 
           width: 340,
           height: 50,
-          margin: '0 auto',
           fontSize: 20,
           fontWeight: 600,
         }}

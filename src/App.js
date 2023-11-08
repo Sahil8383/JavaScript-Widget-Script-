@@ -22,16 +22,15 @@ function App() {
           justify-center
           items-center
           bg-[#2d3133]
+          lg:flex-col
+          md:flex-col
+          sm:flex-col
         '
       >
         <div
           className='
             w-1/2
             h-full
-            flex
-            flex-col
-            justify-center
-            items-center
           '
         >
           <TokenDropdown onTokenSelect={handleTokenSelect} />

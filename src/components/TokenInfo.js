@@ -28,7 +28,7 @@ function TokenInfo({ selectedToken }) {
 
     return (
         <>
-            <div className="widget_main_body h-[200px] w-[500px] border-2 border-gray-500 rounded-[15px] overflow-hidden">
+            <div className="widget_main_body h-[200px] w-[500px] border-2 border-gray-500 rounded-[15px] overflow-hidden sm:w-[400px]">
 
                 <div className="upper h-[43%] flex ">
                     <div className="logo  w-[35%] flex items-center justify-center">
